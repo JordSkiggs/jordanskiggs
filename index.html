@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Data Analyst Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     /* --- Global and previous styles kept unchanged --- */
     * {
@@ -98,7 +98,7 @@
       color: #64ffda;
     }
 
-    /* Projects cards — now empty placeholders */
+    /* Projects cards */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -111,18 +111,22 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(2,12,27,0.8);
       transition: transform 0.2s, box-shadow 0.3s;
-      min-height: 140px; /* enough space to keep layout consistent */
+      min-height: 140px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #8892b0;
-      font-style: italic;
+      color: #64ffda;
+      font-weight: 600;
       text-align: center;
+      cursor: pointer;
+      text-decoration: none;
     }
 
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 4px 12px rgba(100, 255, 218, 0.2);
+      color: #0a192f;
+      background-color: #64ffda;
     }
 
     /* Skills Grid */
@@ -188,7 +192,13 @@
     }
 
     a {
-      color: #64ffda;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: inherit;
+      text-decoration: none;
     }
 
     @media (max-width: 768px) {
@@ -225,7 +235,7 @@
     <div class="nav">
       <div class="logo"><strong style="color: #64ffda;">John Doe</strong></div>
       <nav>
-        <a href="#projects">Projects</a>
+        <a href="projects.html">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -243,9 +253,10 @@
   <section class="section" id="projects">
     <h2>Featured Projects</h2>
     <div class="cards">
-      <div class="card">Project details coming soon...</div>
-      <div class="card">Project details coming soon...</div>
-      <div class="card">Project details coming soon...</div>
+      <a href="diamond-pricing.html" class="card" aria-label="Diamond Pricing and Quality Trade-offs project">
+        Diamond Pricing and Quality Trade-offs
+      </a>
+      <!-- Add more projects here as needed -->
     </div>
   </section>
 
@@ -282,9 +293,9 @@
   <section class="section" id="contact">
     <h2>Contact Me</h2>
     <p style="text-align: center;">
-      📧 johndoe@example.com &nbsp; | &nbsp; 
-      <a href="https://linkedin.com/in/yourname" target="_blank">LinkedIn</a> &nbsp; | &nbsp; 
-      <a href="https://github.com/yourname" target="_blank">GitHub</a>
+      📧 johndoe@example.com &nbsp; | &nbsp;
+      <a href="https://linkedin.com/in/yourname" target="_blank" rel="noopener noreferrer">LinkedIn</a> &nbsp; | &nbsp;
+      <a href="https://github.com/yourname" target="_blank" rel="noopener noreferrer">GitHub</a>
     </p>
   </section>
 
