@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    /* --- Global and previous styles kept unchanged --- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a192f;
+      color: #ccd6f6;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #0a192f;
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid #112240;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav a {
+      color: #64ffda;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: #ccd6f6;
+    }
+
+    .hero {
+      padding: 5rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #ccd6f6;
+    }
+
+    .hero p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #8892b0;
+    }
+
+    .cta-button {
+      margin-top: 2rem;
+      padding: 0.75rem 2rem;
+      background-color: transparent;
+      color: #64ffda;
+      border: 1px solid #64ffda;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #64ffda;
+      color: #0a192f;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #64ffda;
+    }
+
+    /* Projects cards — now empty placeholders */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: #112240;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(2,12,27,0.8);
+      transition: transform 0.2s, box-shadow 0.3s;
+      min-height: 140px; /* enough space to keep layout consistent */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8892b0;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(100, 255, 218, 0.2);
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .skill-btn {
+      background-color: #112240;
+      border: 2px solid #64ffda;
+      color: #64ffda;
+      padding: 1.2rem 1.5rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 110px;
+      width: 220px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .skill-btn strong {
+      font-size: 1.3rem;
+      margin-bottom: 0.3rem;
+      font-weight: 800;
+      color: #64ffda;
+    }
+
+    .skill-desc {
+      font-size: 0.9rem;
+      color: #8892b0;
+      font-style: normal;
+      line-height: 1.2;
+    }
+
+    .skill-btn:hover {
+      background-color: #64ffda;
+      color: #0a192f;
+    }
+
+    .skill-btn:hover strong,
+    .skill-btn:hover .skill-desc {
+      color: #0a192f;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #8892b0;
+      background-color: #0a192f;
+    }
+
+    a {
+      color: #64ffda;
+    }
+
+    @media (max-width: 768px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skill-btn {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav">
+      <div class="logo"><strong style="color: #64ffda;">John Doe</strong></div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Hello, I'm John Doe</h1>
+    <p>Data Analyst | Turning Data into Actionable Insights</p>
+    <button class="cta-button" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">
+      View My Work
+    </button>
+  </section>
+
+  <section class="section" id="projects">
+    <h2>Featured Projects</h2>
+    <div class="cards">
+      <div class="card">Project details coming soon...</div>
+      <div class="card">Project details coming soon...</div>
+      <div class="card">Project details coming soon...</div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <button class="skill-btn">
+        <strong>Excel / Power Query</strong>
+        <span class="skill-desc">Advanced data cleaning & transformation</span>
+      </button>
+      <button class="skill-btn">
+        <strong>SQL</strong>
+        <span class="skill-desc">Complex queries & database management</span>
+      </button>
+      <button class="skill-btn">
+        <strong>Python</strong>
+        <span class="skill-desc">Data analysis & visualization libraries</span>
+      </button>
+      <button class="skill-btn">
+        <strong>Tableau</strong>
+        <span class="skill-desc">Interactive dashboards & storytelling</span>
+      </button>
+      <button class="skill-btn">
+        <strong>Power BI</strong>
+        <span class="skill-desc">Business intelligence & reporting</span>
+      </button>
+      <button class="skill-btn">
+        <strong>Azure Cloud Tools</strong>
+        <span class="skill-desc">Cloud data services & automation</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Me</h2>
+    <p style="text-align: center;">
+      📧 johndoe@example.com &nbsp; | &nbsp; 
+      <a href="https://linkedin.com/in/yourname" target="_blank">LinkedIn</a> &nbsp; | &nbsp; 
+      <a href="https://github.com/yourname" target="_blank">GitHub</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 John Doe. All rights reserved.
+  </footer>
+
+</body>
+</html>
