@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects - John Doe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    /* Same styles as homepage */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a192f;
+      color: #ccd6f6;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #0a192f;
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid #112240;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav a {
+      color: #64ffda;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .nav a:hover {
+      color: #ccd6f6;
+    }
+    main {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    h1 {
+      color: #64ffda;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: #112240;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(2,12,27,0.8);
+      transition: transform 0.2s, box-shadow 0.3s;
+      min-height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64ffda;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(100, 255, 218, 0.2);
+      color: #0a192f;
+      background-color: #64ffda;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #8892b0;
+      background-color: #0a192f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo"><strong style="color: #64ffda;">John Doe</strong></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Projects</h1>
+    <div class="cards">
+      <a href="diamond-pricing.html" class="card" aria-label="Diamond Pricing and Quality Trade-offs project">
+        Diamond Pricing and Quality Trade-offs
+      </a>
+      <!-- You can add more project cards here -->
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 John Doe. All rights reserved.
+  </footer>
+</body>
+</html>
