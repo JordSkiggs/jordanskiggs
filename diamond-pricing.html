@@ -306,9 +306,14 @@ ORDER BY AveragePrice DESC;</code></pre>
     <p class="result-summary">Diamonds with internally flawless (IF) clarity command the highest prices, followed by very very slightly included (VVS1, VVS2). Prices decrease steadily as clarity diminishes.</p>
 
     <h2>6. Price vs. Carat Weight Correlation</h2>
-    <pre><code>SELECT Carat, Price
+    <pre><code>SELECT 
+  Cut,
+  ROUND(Carat, 1) AS CaratRange,
+  AVG(Price) AS AvgPrice,
+  COUNT(*) AS NumberOfDiamonds
 FROM [Training].[dbo].Diamonds
-ORDER BY Carat;</code></pre>
+GROUP BY Cut, ROUND(Carat, 1)
+ORDER BY Cut, CaratRange;</code></pre>
     <table>
       <thead>
         <tr>
